@@ -1,0 +1,17 @@
+//printing N natural number using while loop where N is user input
+#include<stdio.h>
+
+int main(){
+    int N;
+    int a = 1;
+    printf("Enter a number 'N' to get the natural numbers till N: ");
+    scanf("%d", &N);
+
+    while (a <= N){
+        printf("%d, ", a);
+        a++;
+    }
+    printf("\n");
+    printf("These are the N natural number till %d\n",N);
+    return 0;
+}
