@@ -1,0 +1,13 @@
+//use of Ternary operator - (condition) ? (if true) : (if false)
+
+#include<stdio.h>
+
+int main(){
+    int x;
+    printf("Enter your age: ");
+    scanf("%d", &x);
+
+    (x >= 18) ? printf("You are eligible to vote") : printf("You are not eligible to vote");
+    printf("\n");
+    return 0;
+}
