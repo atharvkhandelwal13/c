@@ -1,0 +1,49 @@
+//printing the sum of largest two numbers among 4 numbers entered by the user
+#include<stdio.h>
+
+int main(){
+    int a, b, c, d;
+    int max1, max2;
+
+    printf("Enter the 1st number: ");
+    scanf("%d", &a);
+    printf("Enter the 2nd number: ");
+    scanf("%d", &b);
+    printf("Enter the 3rd number: ");
+    scanf("%d", &c);
+    printf("Enter the 4th number: ");
+    scanf("%d", &d);
+
+    if (a>b){
+        max1 = a;
+        max2 = b;
+    }
+    else{
+        max1 = b;
+        max2 = a;
+    }
+
+    if (c > max1){
+        max2 = max1;
+        max1 = c;
+    }
+    else{
+        if (c > max2){
+            max2 = c;
+        }
+    }
+
+    if (d > max1){
+        max2 = max1;
+        max1 = d;
+    }
+    else{
+        if (d > max2){
+            max2 = d;
+        }
+    }
+
+    printf("The sum of the two largest numbers is: %d\n", (max1 + max2));
+
+    return 0;
+}
