@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main(){
+    char operator;
+    int x, y;
+
+    printf("Enter two integers (in the format: Integer1 Integer2): ");
+    scanf("%d %d", &x, &y);
+    printf("Enter the operator you want to use(+, -, /, *, %%): ");
+    scanf(" %c", &operator); //IMP: space to be added before %c to not take enter from previous kube as input
+
+    switch(operator){
+        case('+'):
+            printf("The Result is %d\n", x+y);
+            break;
+        case('-'):
+            printf("The Result is %d\n", x-y);
+            break;
+        
+        case('*'):
+            printf("The Result is %d\n", x*y);
+            break;
+        
+        case('/'):
+            if(y==0){
+                printf("Error: Division by zero\n");
+                break;
+            }
+            else{
+                printf("The Result is %d\n", x/y);
+                break;
+            }
+        
+        case('%'):
+            if(y==0){
+                printf("Error: Division by zero\n");
+                break;
+            }
+            else{
+                printf("The Result is %d\n", x%y);
+                break;
+            }
+        
+        default:
+            printf("Invalid operator entered\n");
+    }
+    return 0;
