@@ -1,0 +1,17 @@
+//To find if a four digit number entered by user is a palindrome or not
+
+#include<stdio.h>
+int main(){
+    int x, a, b, c, d;
+    printf("Enter a four digit positive integer: ");
+    scanf("%d",&x);
+    
+    a = x/1000;
+    b = (x/100) % 10;
+    c = (x/10) %10;
+    d = x % 10;
+
+    (a==d && b ==c) ? printf("This is a palindrome number\n") : printf("This is not a palindrome number\n");
+
+    return 0;
+}
