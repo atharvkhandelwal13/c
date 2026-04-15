@@ -1,0 +1,1 @@
+int search(int arr[], int size, int ele);
